@@ -31,7 +31,7 @@ def buildIP():
     b4 = random.randrange(0, 255, 1)
     return str(b1) + '.' + str(b2) + '.' + str(b3) + '.' + str(b4)
 
-log_File = open('/tmp/log-generator.log', 'w')
+log_File = open('./log-generator.log', 'w')
 
 count = 0
 
@@ -48,7 +48,7 @@ while True:
     Ip = str(buildIP())
 
     line = "HTTP %s %s %s %s\n"%(Http,Url,Path,Ip)
-    print line
+    print (line)
     log_File.write(line)
 
 log_File.close()
